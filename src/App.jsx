@@ -1,5 +1,6 @@
 
 import Banner from "./components/Banner";
+import BelowSwiperSection from "./components/BelowSwiperSection";
 import Header from "./components/Header";
 import HomeBody from "./components/HomeBody";
 import HomeSwiper from "./components/HomeSwiper";
@@ -13,6 +14,7 @@ function App() {
       <Header/>
       <HomeSwiper/>
       {/* <ProductsSlider/> */}
+      <BelowSwiperSection/>
       <HomeBody/>
     </div>
   )

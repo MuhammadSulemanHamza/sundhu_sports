@@ -6,6 +6,7 @@ import helmetImg from "../assets/swiper/helmet.jpg";
 import rugbyballImg from "../assets/swiper/rugbyball.jpg";
 import tenisballImg from "../assets/swiper/tenisball.jpg";
 import shoe_footballImg from "../assets/swiper/shoe_football.jpg";
+import english_willow_bat from "../assets/swiper/english_willow_bat.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -31,8 +32,7 @@ export default function HomeSwiper() {
                 <SwiperSlide><img className='img-fluid' src={footballImg} /></SwiperSlide>
                 <SwiperSlide><img className='img-fluid' src={helmetImg} /></SwiperSlide>
                 <SwiperSlide><img className='img-fluid' src={rugbyballImg} /></SwiperSlide>
-                <SwiperSlide><img className='img-fluid' src={tenisballImg} /></SwiperSlide>
-                <SwiperSlide><img className='img-fluid' src={shoe_footballImg} /></SwiperSlide>
+                <SwiperSlide><img className='img-fluid' src={english_willow_bat} /></SwiperSlide>
 
             </Swiper>
         </div>
