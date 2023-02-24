@@ -14,7 +14,7 @@ img {
     transition: all 0.9s;
 }
 
-img.hover-zoom:hover{
+img.hover-zoom:hover {
     transform: scale(1.15);
 }
 
@@ -22,9 +22,7 @@ img.hover-zoom:hover{
     position: absolute;
     bottom: 0;
     background: #ffffff78;
-    background: #ffffff78;
     /* Black see-through */
-    color: #f1f1f1;
     width: 100%;
     transition: .5s ease;
     opacity: 0;

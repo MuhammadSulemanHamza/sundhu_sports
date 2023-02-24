@@ -1,5 +1,49 @@
 @import "./sass/bootstrap";
+@import "./sass/footer";
 
-.red{
-    color: red;
+.horizontal-line::after,
+.horizontal-line::before {
+    content: "";
+    min-height: 2px;
+    min-width: 64px;
+    background-color: black;
+    color: black;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.menu-item {
+    color: gray;
+    font-size: large;
+    font-weight: 400;
+    &:hover {
+        color: black;
+    }
+}
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:
+        black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
