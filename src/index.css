@@ -10829,11 +10829,10 @@ textarea.form-control-lg {
   min-height: 2px;
   min-width: 64px;
   background-color: black;
-  color: black;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 32px;
   margin-right: 32px;
+  margin-left: 32px;
 }
 
 .menu-item {
