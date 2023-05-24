@@ -1,0 +1,8 @@
+
+.my-parallax{
+    background-image: url(../../assets/cricket-equipments-parrallex.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 190px;
+    padding-bottom: 190px;
+}

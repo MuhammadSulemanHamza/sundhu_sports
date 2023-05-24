@@ -7,6 +7,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../assets/logo.png';
 
 const Header = () => {
+
+  const [searchShow, setsearchShow] = React.useState(false);
   return (
     <div>
       <Navbar collapseOnSelect expand="md" bg="white" variant="light" className="shadow-sm">
@@ -33,19 +35,22 @@ const Header = () => {
             </Nav> */}
             <Nav>
               <Nav.Link className='d-flex align-items-center'>
-                <Search size={18} color={"black"} />
+                <div className='my-search'>
+                  <input type="text" className={`${searchShow ? 'd-block' : 'd-none'}`} />
+                </div>
+                <Search size={18} color={"black"} onClick={() => { setsearchShow((val) => !val ); }} />
                 <span className="d-md-none mx-4 fw-600 text-primary">Search</span>
               </Nav.Link>
               <Nav.Link className='d-flex align-items-center'>
-                <Person size={20} color={"black"}/>
+                <Person size={20} color={"black"} />
                 <span className="d-md-none mx-4 fw-600 text-primary">Account</span>
               </Nav.Link>
               <Nav.Link className='d-flex align-items-center' >
-                <Heart size={20} color={"black"}/>
+                <Heart size={20} color={"black"} />
                 <span className="d-md-none mx-4 fw-600 text-primary">Favorite</span>
               </Nav.Link>
               <Nav.Link className='d-flex align-items-center'>
-                <Cart3 size={20} color={"black"}/>
+                <Cart3 size={20} color={"black"} />
                 <span className="d-md-none mx-4 fw-600 text-primary">Cart</span>
               </Nav.Link>
             </Nav>

@@ -1,50 +1,47 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import ProductCard from "./ProductCard";
+import React from 'react'
+import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons';
+import ProductCard from '../components/ProductCard';
+import {
+    CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
+} from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "./productsSlider.css";
-
-// import required modules
-import { Pagination } from "swiper";
-
-export default function ProductsSlider() {
+const ProductsSlider = () => {
     return (
-        <Swiper
-            pagination={{
-                clickable: true,
-            }}
-            modules={[Pagination]}
-            className="mySwiper"
-            breakpoints={{
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 40
-                },
+        <div className='my-product-carousel'>
+            <CarouselProvider
+                className='p-4'
+                naturalSlideHeight={125}
+                naturalSlideWidth={100}
+                totalSlides={11}
+                visibleSlides={4}
+                step={2}
+            >
+                <Slider>
+                    <Slide index={0}><ProductCard /></Slide>
+                    <Slide index={1}><ProductCard /></Slide>
+                    <Slide index={2}><ProductCard /></Slide>
+                    <Slide index={3}><ProductCard /></Slide>
+                    <Slide index={4}><ProductCard /></Slide>
+                    <Slide index={5}><ProductCard /></Slide>
+                    <Slide index={6}><ProductCard /></Slide>
+                    <Slide index={7}><ProductCard /></Slide>
+                    <Slide index={8}><ProductCard /></Slide>
+                    <Slide index={9}><ProductCard /></Slide>
+                    <Slide index={10}><ProductCard /></Slide>
+                </Slider>
 
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 40
-                },
-                1440: {
-                    slidesPerView: 4,
-                    spaceBetween: 40
-                }
-            }}
-        >
-            <SwiperSlide><ProductCard /></SwiperSlide>
-            <SwiperSlide><ProductCard /></SwiperSlide>
-            <SwiperSlide><ProductCard /></SwiperSlide>
-            <SwiperSlide><ProductCard /></SwiperSlide>
-            <SwiperSlide><ProductCard /></SwiperSlide>
-            <SwiperSlide><ProductCard /></SwiperSlide>
-            <SwiperSlide><ProductCard /></SwiperSlide>
-            <SwiperSlide><ProductCard /></SwiperSlide>
-            <SwiperSlide><ProductCard /></SwiperSlide>
-        </Swiper>
-
-    );
+                <ButtonBack className='btn btn-outline-dark rounded-circle border border-2 border-dark
+                    position-absolute top-50 start-0 m-1'>
+                    <ChevronLeft className='' />
+                </ButtonBack>
+                <ButtonNext className='btn btn-outline-dark rounded-circle border border-2 border-dark
+                    position-absolute top-50 end-0 m-1'>
+                    <ChevronRight />
+                </ButtonNext>
+            </CarouselProvider>
+        </div>
+    )
 }
+
+export default ProductsSlider

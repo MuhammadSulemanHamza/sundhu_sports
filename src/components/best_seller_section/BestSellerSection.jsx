@@ -1,12 +1,11 @@
 import React from 'react'
 import ProductsSlider from '../ProductsSlider'
 
-const PopularSection = () => {
-
+const BestSellerSection = () => {
     return (
         <div>
             <div className='mx-auto my-4 text-center'>
-                <div className='h4 horizontal-line'>Most Popular</div>
+                <div className='h4 horizontal-line'>Best Seller Products</div>
             </div>
             <div className='mx-auto my-4 text-center'>
                 <ul className='d-flex justify-content-center list-unstyled'>
@@ -25,9 +24,9 @@ const PopularSection = () => {
                     </li>
                 </ul>
             </div>
-           <ProductsSlider/>
+            <ProductsSlider />
         </div>
     )
 }
 
-export default PopularSection
+export default BestSellerSection
